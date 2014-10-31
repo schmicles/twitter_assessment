@@ -1,0 +1,14 @@
+<div id="content">
+  <p>
+    <% @tweets.each do |tweet| %>
+      <div class="post">
+        <p><font size = "5px" ><%= tweet.tweet %></font></p>
+        <p align = "right"><strong><font size="3px">Posted by <%= tweet.user.username %></strong></font></p>
+        <p align = "right"><font size = "1px" >Posted at <%= tweet.created_at %></font></align></p>
+      </div><hr>
+    <% end %>
+    <line>
+  </p>
+</div>
+
+

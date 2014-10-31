@@ -1,0 +1,21 @@
+<div id="content">
+  <h3><strong>Create New Tweet</strong></h3>
+    <form id="create_new" role="form" action="/tweets" method="post">
+      <textarea name="post" class="form-control" id="inputContent" placeholder="Enter content" rows="2"></textarea>
+
+        <div align="right"><button value="submit" class="btn btn-default">Tweet It</button></div>
+    </form>
+
+  <p>
+  <p>
+  <p>
+  <h3><strong>My Tweets</strong></h3>
+  <hr>
+ <% @tweets_array.each do |tweet| %>
+  <div class="post">
+    <p><font size = "4px" ><%= tweet.tweet %></font></p>
+      <p align = "right"><font size="2px">Posted by <strong><%= tweet.user.username %></strong></font></p>
+      <p align = "right"><font size="1px" >Posted at <%= tweet.created_at %></font></align></p><hr>
+  <% end %>
+</div>
+
