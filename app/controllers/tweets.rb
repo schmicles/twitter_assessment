@@ -16,6 +16,6 @@ end
 
 #Delete
 delete '/tweets' do
-  Tweet.where(tweet.id).destroy
-  redirect 'tweets/index'
+  Tweet.find(params[:id]).destroy
+  redirect '/users'
 end
