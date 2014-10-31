@@ -15,7 +15,13 @@
   <div class="post">
     <p><font size = "4px" ><%= tweet.tweet %></font></p>
       <p align = "right"><font size="2px">Posted by <strong><%= tweet.user.username %></strong></font></p>
-      <p align = "right"><font size="1px" >Posted at <%= tweet.created_at %></font></align></p><hr>
+      <p align = "right"><font size="1px" >Posted at <%= tweet.created_at %></font></align></p>
+
+      <form action="/tweets" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button class="btn btn-default" value="submit">Delete</button>
+      </form>
+      <hr>
   <% end %>
 </div>
 

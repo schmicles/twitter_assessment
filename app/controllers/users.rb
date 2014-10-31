@@ -3,6 +3,7 @@ get '/users' do
   tweets_array = []
   @user = User.find_by(id: session[:user_id])
   @tweets_array = @user.tweets
+  @tweets_array = Tweet.order("tweets.created_at desc")
   erb :'/users/show'
 end
 

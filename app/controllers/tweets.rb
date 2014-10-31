@@ -15,7 +15,7 @@ post '/tweets' do
 end
 
 #Delete
-# delete '/tweets/:id' do
-#   Tweet.find(params[:id]).destroy
-#   redirect 'tweets/show'
-# end
+delete '/tweets' do
+  Tweet.where(tweet.id).destroy
+  redirect 'tweets/index'
+end
