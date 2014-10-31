@@ -1,6 +1,7 @@
 #Index - Show All
 get '/tweets' do
   @tweets = Tweet.all
+  @tweets = Tweet.order("tweets.created_at desc")
   erb :'tweets/index'
 end
 
