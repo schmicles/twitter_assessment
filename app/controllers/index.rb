@@ -25,7 +25,7 @@ get '/' do
 
   else
 
-  redirect '/tweets/index'
+  redirect :tweets
   end
 end
 
